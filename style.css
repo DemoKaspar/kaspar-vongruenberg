@@ -1,0 +1,128 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+nav {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+nav a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 30px 0 15px 0;
+    color: #000;
+}
+
+p {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0 0 15px 0;
+}
+
+li {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+em {
+    font-style: italic;
+    color: #333;
+}
+
+.newsletter-signup {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.newsletter-signup h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.back-link {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.back-link a {
+    color: #666;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0 30px 0;
+    display: block;
+    filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    header h1 {
+        font-size: 20px;
+    }
+    
+    nav {
+        font-size: 14px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    p, li {
+        font-size: 14px;
+    }
+}

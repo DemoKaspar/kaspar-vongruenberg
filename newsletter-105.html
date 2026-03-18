@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #105 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #105</h1>
+            <h2>Design principles to get your platform ready for agents // + big announcements on Plat2026!</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>I spent last week building a vibe coding setup on GCP (here is a video I recorded on the final result). Last week I also had a larger workshop with AWS in London and I summarized what really stood out to me when modelling a platform in a way it can not only be used by humans but also by AI agents. That turned out to be an interesting architectural challenge and I thought I'd summarize my learnings on how to architect platforms in an AI first world. Before we start, let's just clarify that I find the word agent as blurry as you. I really mean any type of inferring AI/LLM/Agent. So, let us start:</p>
+
+            <h3>Design for a 20 Year Old Intern</h3>
+
+            <p>What? Yes! If your platform, your interfaces, how one consumes your path etc. isn't so self-explanatory that a 20 year old intern can pick this up with zero training, an agent cannot either. This means:</p>
+
+            <ul>
+                <li>Are the conceptual models and the language you are using easy to understand and logic? And this includes everything from capabilities over API and interface design naming conventions etc.</li>
+                <li>Is everything documented? Nothing will work without excellent documentation. Somebody in the audience said that will be a problem because they only have things in closed PDFs and what to do now. To which my simple answer is: change the org before it goes out of business…</li>
+            </ul>
+
+            <h3>Define Your Line of Determinism</h3>
+
+            <p>Delicious term, right? Well what I mean is more straight forward: you need to decide for yourself how far you feel comfortable an agent takes non deterministic decisions. LLMs estimate the next most likely word, they do not care about your policy conventions. So you probably don't want them to guess the configuration of your RDS database in production by vibe coding some Terraform. You are however probably ok to have an agent express in general "I need a postgres database for production" and then hand this over to a deterministic system that fires up that DB with exactly the policy configs your org requires. That hand over point between how far the agent can go until deterministic APIs take over is what I call the line of determinism. In order for that line to be a smooth and productive experience:</p>
+
+            <ul>
+                <li>You need to focus on your backend and structure it well (again conceptual model relevant here!)</li>
+                <li>The interfaces need to be easy to consume safely (RBAC for agents is a thing!)</li>
+                <li>Limit choice - as a rule of thumb in order to get stable outcomes you want systems trained on large amounts of data (LLMS) to make decisions against a very limited number of options.</li>
+                <li>Think about maintainability from the get go. Your 500 person marketing team vibe coding databases and nobody cleans up etc. will become a disaster.</li>
+                <li>Ensure inter-system balance of power. Which is a fancy way of saying let different parts of your toolchain mistrust each other. If a model makes a choice, maybe have a second model doubt it. If the choice is made, run tests. Before you deploy let OPA run a policy check etc. These things matter!</li>
+            </ul>
+
+            <h3>The Paradox of AI and Platforms</h3>
+
+            <p>This is, to quote Angela Merkel "Neuland" for all of us but the fundamental building blocks are becoming clear already. Funny enough by focussing on agentic workflows and AI we are also forcing ourselves to make the platform delightful to use for humans. That is exactly what came out of a fascinating debate that I also had last week with friends from Google, Thoughtworks and Sixt - lovingly called the "Travelling Circus" because I meet them all over the world at funky tech events. Here is the recording of that debate.</p>
+
+            <h3>Big News: PlatformCon 2026!</h3>
+
+            <p>Most of that "circus" will also meet at PlatformCon again and I have big news too! What started as an idea in a webinar I did with Manuel Pais a couple of years ago will now be even bigger! In 2026 we will go absolutely wild. For our US friends we have just booked the brand new NYC Convene overlooking the Hudson and provide a space for over 1,000 Platform Engineers to debate and learn. You loved the food this year, but wait until you see what we're cooking up, expanded food menu with bigger networking zones, and drinks worth staying late for.</p>
+
+            <p>The virtual event will, as always, be totally free for everyone around the world, so no one gets left out of the conversation.</p>
+
+            <p>And if you're planning to be in London or New York, this is your first chance to grab TooGoodToBeTrue tickets, the lowest price you'll ever pay to be in the room with the best of the platform engineering community. Tickets are available only until the end of October.</p>
+
+            <p>And with that dear friends I will go feed my chicken a second time today because it is getting cold in good old Brandenburg. Winter is coming.</p>
+
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-106.html">Next: Issue #106 - How much should we AI-ify the engineering process already? →</a></p>
+                <p><a href="newsletter-104.html">← Previous: Issue #104 - Building Platforms with Kaspar</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

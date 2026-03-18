@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #89 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #89</h1>
+            <h2>The three types of platform users</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>Not all developers use platforms the same way. Understanding the different types of platform users is crucial for building experiences that work for everyone.</p>
+
+            <p>After working with hundreds of developers across different organizations, I've identified three distinct platform user types. Each has different needs, different pain points, and different success metrics.</p>
+
+            <p>Here's how to design for all three.</p>
+
+            <h3>Type 1: The Golden Path User</h3>
+
+            <p><strong>Who they are:</strong> Developers who want to ship features fast without worrying about infrastructure details. They're happy to follow established patterns if those patterns work well.</p>
+
+            <p><strong>What they want:</strong></p>
+            <ul>
+                <li>Simple, reliable workflows</li>
+                <li>Clear documentation and examples</li>
+                <li>Minimal configuration required</li>
+                <li>Fast feedback loops</li>
+                <li>Someone else to handle the complexity</li>
+            </ul>
+
+            <p><strong>What frustrates them:</strong></p>
+            <ul>
+                <li>Too many options and configurations</li>
+                <li>Unclear error messages</li>
+                <li>Slow or unreliable platform behavior</li>
+                <li>Having to learn infrastructure concepts</li>
+            </ul>
+
+            <p><strong>How to design for them:</strong></p>
+            <ul>
+                <li>Make your golden paths incredibly smooth</li>
+                <li>Provide sensible defaults for everything</li>
+                <li>Hide complexity behind simple interfaces</li>
+                <li>Invest heavily in clear, example-driven documentation</li>
+                <li>Make common operations one-click or one-command</li>
+            </ul>
+
+            <p><strong>Success metrics:</strong> Time to first deployment, deployment frequency, user satisfaction scores</p>
+
+            <h3>Type 2: The Power User</h3>
+
+            <p><strong>Who they are:</strong> Experienced developers who understand infrastructure and want control. They use platforms to be more efficient, not to avoid complexity.</p>
+
+            <p><strong>What they want:</strong></p>
+            <ul>
+                <li>Powerful APIs and CLI tools</li>
+                <li>Ability to customize and extend platform capabilities</li>
+                <li>Visibility into what the platform is doing</li>
+                <li>Escape hatches for edge cases</li>
+                <li>Integration with their preferred tools</li>
+            </ul>
+
+            <p><strong>What frustrates them:</strong></p>
+            <ul>
+                <li>Overly simplified interfaces that hide important details</li>
+                <li>Lack of customization options</li>
+                <li>Platform making decisions they want to control</li>
+                <li>Poor API design or documentation</li>
+                <li>No way to handle their specific use cases</li>
+            </ul>
+
+            <p><strong>How to design for them:</strong></p>
+            <ul>
+                <li>Provide comprehensive APIs alongside web interfaces</li>
+                <li>Offer advanced configuration options</li>
+                <li>Build in extensibility and plugin systems</li>
+                <li>Provide detailed logging and debugging tools</li>
+                <li>Create escape hatches for unsupported use cases</li>
+            </ul>
+
+            <p><strong>Success metrics:</strong> API usage, custom configuration adoption, feature request fulfillment</p>
+
+            <h3>Type 3: The Reluctant User</h3>
+
+            <p><strong>Who they are:</strong> Developers who are required to use the platform but would prefer to manage infrastructure themselves. Often senior engineers with strong opinions about tooling.</p>
+
+            <p><strong>What they want:</strong></p>
+            <ul>
+                <li>The platform to not get in their way</li>
+                <li>Transparency about what the platform is doing</li>
+                <li>Ability to override platform decisions</li>
+                <li>Migration paths away from the platform if needed</li>
+                <li>Proof that the platform adds value, not just restrictions</li>
+            </ul>
+
+            <p><strong>What frustrates them:</strong></p>
+            <ul>
+                <li>Forced adoption without clear benefits</li>
+                <li>Platform limitations that prevent their preferred approaches</li>
+                <li>Black box behavior they can't debug or understand</li>
+                <li>Performance or reliability issues</li>
+                <li>Platform team dismissing their concerns</li>
+            </ul>
+
+            <p><strong>How to design for them:</strong></p>
+            <ul>
+                <li>Be transparent about platform behavior and decisions</li>
+                <li>Provide detailed monitoring and debugging capabilities</li>
+                <li>Offer escape hatches and override mechanisms</li>
+                <li>Engage them in platform design discussions</li>
+                <li>Focus on proving value rather than enforcing compliance</li>
+            </ul>
+
+            <p><strong>Success metrics:</strong> Complaint reduction, voluntary adoption of new features, engagement in platform discussions</p>
+
+            <h3>Designing for All Three Types</h3>
+
+            <p>The challenge is building a platform that serves all three user types without compromising any of them. Here's how:</p>
+
+            <h4>Layered interfaces</h4>
+            <p>Provide multiple ways to interact with your platform:</p>
+            <ul>
+                <li><strong>Web UI:</strong> Simple workflows for golden path users</li>
+                <li><strong>CLI tools:</strong> Powerful scripting for power users</li>
+                <li><strong>APIs:</strong> Full programmatic access for advanced use cases</li>
+                <li><strong>Configuration files:</strong> Declarative definitions for reluctant users who want to see everything</li>
+            </ul>
+
+            <h4>Progressive disclosure</h4>
+            <p>Start simple, reveal complexity as needed:</p>
+            <ul>
+                <li>Simple forms with "Advanced options" sections</li>
+                <li>Sensible defaults with override capabilities</li>
+                <li>Basic and advanced documentation tracks</li>
+            </ul>
+
+            <h4>Transparency options</h4>
+            <p>Let users choose their level of visibility:</p>
+            <ul>
+                <li>High-level status for golden path users</li>
+                <li>Detailed logs and metrics for power users</li>
+                <li>Raw configuration and debug info for reluctant users</li>
+            </ul>
+
+            <h3>Common Design Mistakes</h3>
+
+            <h4>Designing only for golden path users</h4>
+            <p>Results in platforms that are too simple for complex use cases, driving power users and reluctant users to build workarounds.</p>
+
+            <h4>Designing only for power users</h4>
+            <p>Creates platforms that are too complex for most developers, leading to low adoption and lots of support requests.</p>
+
+            <h4>Ignoring reluctant users</h4>
+            <p>Reluctant users often become platform advocates if you win them over, or platform saboteurs if you don't. They're worth the investment.</p>
+
+            <h4>Trying to serve everyone with the same interface</h4>
+            <p>One-size-fits-all interfaces usually fit nobody well. Different user types need different interaction models.</p>
+
+            <h3>User Type Evolution</h3>
+
+            <p>Remember that user types can change:</p>
+            <ul>
+                <li>Golden path users may become power users as they gain experience</li>
+                <li>Reluctant users may become advocates if they see clear value</li>
+                <li>Power users may prefer golden paths for routine tasks</li>
+            </ul>
+
+            <p>Design your platform to support this evolution, not lock people into rigid categories.</p>
+
+            <h3>Measuring Success Across User Types</h3>
+
+            <p>Track different metrics for different user types:</p>
+
+            <p><strong>Golden Path Users:</strong> Onboarding time, task completion rates, satisfaction scores</p>
+            <p><strong>Power Users:</strong> API adoption, advanced feature usage, integration volume</p>
+            <p><strong>Reluctant Users:</strong> Issue escalation rates, workaround usage, feedback sentiment</p>
+
+            <h3>The Goal: Something for Everyone</h3>
+
+            <p>The best platforms don't force all users into the same mold. They provide different paths for different needs while maintaining consistency and reliability.</p>
+
+            <p>Golden path users get simplicity. Power users get flexibility. Reluctant users get transparency.</p>
+
+            <p>Everyone gets value.</p>
+
+            <p>Talk soon,</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-90.html">Next: Issue #90 - How to design platform APIs that developers actually want to use →</a></p>
+                <p><a href="newsletter-88.html">← Previous: Issue #88 - Platform governance without bureaucracy</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

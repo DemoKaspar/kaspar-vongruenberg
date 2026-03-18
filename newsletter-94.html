@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #94 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #94</h1>
+            <h2>Platform observability: what to measure and why</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>A platform team reached out last week with a question that's surprisingly common: "We built an internal developer platform, but we don't know if it's working. What should we be measuring?"</p>
+
+            <p>Good platform observability isn't just about uptime and response times. You need to understand how your platform affects developer productivity, business outcomes, and organizational efficiency.</p>
+
+            <p>Here's what to measure and why.</p>
+
+            <h3>The Three Layers of Platform Metrics</h3>
+
+            <h4>Layer 1: Platform Health Metrics</h4>
+            <p>These tell you if your platform is functioning:</p>
+            <ul>
+                <li><strong>Uptime/Availability:</strong> Is your platform available when developers need it?</li>
+                <li><strong>Response times:</strong> How fast do platform APIs respond?</li>
+                <li><strong>Error rates:</strong> What percentage of platform operations fail?</li>
+                <li><strong>Resource utilization:</strong> Are you over or under-provisioned?</li>
+            </ul>
+
+            <p><strong>Why these matter:</strong> A broken platform creates developer frustration and reduces productivity.</p>
+
+            <h4>Layer 2: Developer Experience Metrics</h4>
+            <p>These tell you how your platform affects developers:</p>
+            <ul>
+                <li><strong>Lead time:</strong> How long from code commit to production deployment?</li>
+                <li><strong>Deployment frequency:</strong> How often are teams shipping?</li>
+                <li><strong>Time to first deployment:</strong> How long does it take new developers to ship their first change?</li>
+                <li><strong>Platform adoption rate:</strong> What percentage of eligible teams are using your platform?</li>
+                <li><strong>Self-service success rate:</strong> What percentage of requests are handled without human intervention?</li>
+                <li><strong>Developer satisfaction:</strong> How do developers rate your platform?</li>
+            </ul>
+
+            <p><strong>Why these matter:</strong> These connect platform functionality to developer productivity.</p>
+
+            <h4>Layer 3: Business Impact Metrics</h4>
+            <p>These tell you how your platform affects business outcomes:</p>
+            <ul>
+                <li><strong>Feature delivery velocity:</strong> Are teams shipping features faster?</li>
+                <li><strong>Compliance adherence:</strong> Are applications meeting security/compliance requirements?</li>
+                <li><strong>Cost efficiency:</strong> Are you reducing infrastructure costs per application?</li>
+                <li><strong>Incident reduction:</strong> Are you reducing production incidents?</li>
+                <li><strong>Time to market:</strong> How quickly can new products/services be launched?</li>
+            </ul>
+
+            <p><strong>Why these matter:</strong> These justify platform investment to leadership.</p>
+
+            <h3>The DORA Metrics for Platforms</h3>
+
+            <p>The DORA metrics (Lead Time, Deployment Frequency, Mean Time to Recovery, Change Failure Rate) are great for measuring platform impact, but you need to measure them correctly:</p>
+
+            <h4>Lead Time</h4>
+            <p><strong>Don't measure:</strong> Just the platform deployment time</p>
+            <p><strong>Do measure:</strong> End-to-end lead time including platform provisioning, deployment, and verification</p>
+
+            <h4>Deployment Frequency</h4>
+            <p><strong>Don't measure:</strong> Just successful deployments</p>
+            <p><strong>Do measure:</strong> Deployment attempts and success rates separately</p>
+
+            <h4>Mean Time to Recovery</h4>
+            <p><strong>Don't measure:</strong> Just platform infrastructure recovery</p>
+            <p><strong>Do measure:</strong> Time to restore service functionality for end users</p>
+
+            <h4>Change Failure Rate</h4>
+            <p><strong>Don't measure:</strong> Just deployment failures</p>
+            <p><strong>Do measure:</strong> Changes that require hotfixes, rollbacks, or cause service degradation</p>
+
+            <h3>Platform-Specific Metrics to Track</h3>
+
+            <h4>Golden Path Metrics</h4>
+            <ul>
+                <li>Time to complete each golden path workflow</li>
+                <li>Success rate of golden path completions</li>
+                <li>Percentage of teams using golden paths vs. custom solutions</li>
+            </ul>
+
+            <h4>Support and Onboarding Metrics</h4>
+            <ul>
+                <li>Number of support tickets per platform user</li>
+                <li>Time to resolution for different types of issues</li>
+                <li>Onboarding completion rates</li>
+                <li>Time from platform access to first successful deployment</li>
+            </ul>
+
+            <h4>Resource Efficiency Metrics</h4>
+            <ul>
+                <li>Infrastructure cost per application/team</li>
+                <li>Resource utilization rates</li>
+                <li>Waste reduction (unused resources, over-provisioning)</li>
+            </ul>
+
+            <h3>How to Collect These Metrics</h3>
+
+            <h4>Automated instrumentation</h4>
+            <p>Build metrics collection into your platform from day one. Every API call, every workflow, every user action should be logged and measured.</p>
+
+            <h4>Regular surveys</h4>
+            <p>Quarterly developer satisfaction surveys. Ask specific questions about platform pain points and desired features.</p>
+
+            <h4>Integration with existing tools</h4>
+            <p>Pull data from your CI/CD systems, issue trackers, and monitoring tools rather than building everything from scratch.</p>
+
+            <h4>Business metrics integration</h4>
+            <p>Work with product teams to understand how platform improvements correlate with business outcomes.</p>
+
+            <h3>Common Measurement Mistakes</h3>
+
+            <ul>
+                <li><strong>Measuring everything:</strong> Too many metrics create noise, not insight</li>
+                <li><strong>Vanity metrics:</strong> Measuring things that look good but don't drive decisions</li>
+                <li><strong>Technical metrics only:</strong> Missing the business impact story</li>
+                <li><strong>Point-in-time measurements:</strong> Not tracking trends over time</li>
+                <li><strong>No action on insights:</strong> Collecting data but not using it to improve the platform</li>
+            </ul>
+
+            <h3>Building Your Metrics Dashboard</h3>
+
+            <p>Your platform metrics dashboard should tell a story:</p>
+            <ol>
+                <li><strong>Executive summary:</strong> High-level business impact in 3-4 key metrics</li>
+                <li><strong>Developer experience:</strong> How the platform is serving developers</li>
+                <li><strong>Platform health:</strong> Technical performance and reliability</li>
+                <li><strong>Trends and insights:</strong> What's getting better or worse over time</li>
+            </ol>
+
+            <h3>The Goal: Data-Driven Platform Evolution</h3>
+
+            <p>The purpose of platform observability isn't just reporting—it's evolution. Your metrics should help you:</p>
+            <ul>
+                <li>Prioritize platform improvements</li>
+                <li>Identify adoption barriers</li>
+                <li>Prove business value</li>
+                <li>Spot problems before they become critical</li>
+            </ul>
+
+            <p>Start with a few key metrics that matter most to your organization, and expand from there. Perfect measurement is the enemy of useful measurement.</p>
+
+            <p>Talk soon,</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-95.html">Next: Issue #95 - The hidden costs of platform complexity →</a></p>
+                <p><a href="newsletter-93.html">← Previous: Issue #93 - How to handle platform migrations (without breaking everything)</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

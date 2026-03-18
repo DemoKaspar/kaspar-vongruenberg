@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #93 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #93</h1>
+            <h2>How to handle platform migrations (without breaking everything)</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>Platform migrations are some of the scariest projects in software engineering. You're changing the infrastructure that every team depends on, often while they're still shipping features.</p>
+
+            <p>I've helped dozens of organizations migrate platforms—from monoliths to microservices, from VMs to containers, from on-prem to cloud, from custom tools to standardized platforms.</p>
+
+            <p>Here's how to do it without breaking everything (and everyone's trust in your platform team).</p>
+
+            <h3>Why Platform Migrations Are So Risky</h3>
+
+            <p>Platform migrations are uniquely challenging because:</p>
+            <ul>
+                <li><strong>Scale:</strong> You're affecting every application and team</li>
+                <li><strong>Dependencies:</strong> Applications depend on platform behaviors they may not even know about</li>
+                <li><strong>Urgency:</strong> Teams want to keep shipping while you're migrating</li>
+                <li><strong>Expertise:</strong> You're asking every team to learn new tools and patterns</li>
+                <li><strong>Risk:</strong> A mistake affects everyone simultaneously</li>
+            </ul>
+
+            <h3>The Strangler Fig Pattern for Platforms</h3>
+
+            <p>The best platform migrations use the "Strangler Fig" pattern—gradually replacing the old platform with the new one, piece by piece.</p>
+
+            <h4>Phase 1: Parallel Systems</h4>
+            <p>Build the new platform alongside the old one. Don't migrate any workloads yet. Focus on:</p>
+            <ul>
+                <li>Getting the new platform to feature parity with the critical paths</li>
+                <li>Building migration tooling</li>
+                <li>Training your platform team on the new system</li>
+                <li>Creating comprehensive documentation</li>
+            </ul>
+
+            <h4>Phase 2: Pilot Migrations</h4>
+            <p>Choose 2-3 volunteer teams with simple, non-critical applications. Focus on:</p>
+            <ul>
+                <li>Learning what migration pain points you missed</li>
+                <li>Refining your migration process</li>
+                <li>Building confidence in the new platform</li>
+                <li>Creating migration success stories</li>
+            </ul>
+
+            <h4>Phase 3: Systematic Migration</h4>
+            <p>Migrate applications in waves, starting with the easiest and least risky:</p>
+            <ul>
+                <li>New applications (always start on the new platform)</li>
+                <li>Development environments first, then production</li>
+                <li>Simple applications before complex ones</li>
+                <li>Teams that are excited about the change</li>
+            </ul>
+
+            <h4>Phase 4: Forced Migration</h4>
+            <p>Eventually, you'll need to set a sunset date for the old platform and move everyone off:</p>
+            <ul>
+                <li>Give teams 6-12 months notice</li>
+                <li>Provide dedicated migration support</li>
+                <li>Make the old platform increasingly expensive/inconvenient</li>
+                <li>Have an escalation process for truly stuck teams</li>
+            </ul>
+
+            <h3>Migration Success Principles</h3>
+
+            <h4>1. Make the new thing better, not just different</h4>
+            <p>Don't just replicate old platform functionality. Solve real pain points that teams have with the current platform.</p>
+
+            <h4>2. Provide migration tools, not migration instructions</h4>
+            <p>Build automated migration tools rather than asking teams to manually recreate their configurations.</p>
+
+            <h4>3. Support both platforms during transition</h4>
+            <p>Don't let the old platform rot while you build the new one. Teams stuck on the old platform will hate you.</p>
+
+            <h4>4. Be transparent about timeline and process</h4>
+            <p>Regular updates, clear milestones, and honest communication about blockers and delays.</p>
+
+            <h4>5. Provide hands-on migration support</h4>
+            <p>Don't just throw documentation over the fence. Embed with teams, pair on migrations, and solve problems together.</p>
+
+            <h3>Common Migration Mistakes</h3>
+
+            <h4>The "big bang" approach</h4>
+            <p>Trying to migrate everything at once. This maximizes risk and makes rollback impossible.</p>
+
+            <h4>Building the new platform in isolation</h4>
+            <p>Not involving application teams in the design process, then wondering why adoption is low.</p>
+
+            <h4>Underestimating migration effort</h4>
+            <p>Assuming that migration will be quick because "it's just moving from A to B."</p>
+
+            <h4>Neglecting the change management aspect</h4>
+            <p>Focusing only on technical migration and ignoring the human side of change.</p>
+
+            <h4>No rollback plan</h4>
+            <p>Not having a clear plan for what to do if the migration goes wrong.</p>
+
+            <h3>Managing Migration Communication</h3>
+
+            <h4>Create a migration webpage</h4>
+            <p>One source of truth for migration status, timelines, resources, and FAQs.</p>
+
+            <h4>Regular migration newsletters</h4>
+            <p>Weekly or bi-weekly updates on migration progress, upcoming deadlines, and success stories.</p>
+
+            <h4>Migration office hours</h4>
+            <p>Regular sessions where teams can ask questions and get help with their migrations.</p>
+
+            <h4>Success story showcases</h4>
+            <p>Highlight teams that have successfully migrated and the benefits they're seeing.</p>
+
+            <h3>Technical Migration Tips</h3>
+
+            <h4>Build compatibility layers</h4>
+            <p>Create adapters that let applications use old APIs while running on new infrastructure.</p>
+
+            <h4>Use feature flags for platform features</h4>
+            <p>Let teams gradually adopt new platform capabilities rather than all at once.</p>
+
+            <h4>Invest heavily in monitoring and rollback</h4>
+            <p>You need to quickly detect when migrations go wrong and be able to rollback fast.</p>
+
+            <h4>Automate everything you can</h4>
+            <p>Configuration migration, testing, deployment—anything that can be automated should be.</p>
+
+            <h3>When Migrations Go Wrong</h3>
+
+            <p>Sometimes migrations fail. When they do:</p>
+            <ul>
+                <li><strong>Communicate immediately:</strong> Tell affected teams what happened and what you're doing about it</li>
+                <li><strong>Rollback fast:</strong> Don't try to fix forward if rollback is an option</li>
+                <li><strong>Do a blameless post-mortem:</strong> Learn from what went wrong</li>
+                <li><strong>Adjust your process:</strong> Fix the migration process before continuing</li>
+                <li><strong>Rebuild trust:</strong> Be extra careful and communicative with subsequent migrations</li>
+            </ul>
+
+            <h3>The Long View</h3>
+
+            <p>Platform migrations typically take 12-24 months from start to finish. That's normal and expected.</p>
+
+            <p>Don't rush. A slow, successful migration is better than a fast, broken one.</p>
+
+            <p>Focus on making the new platform so much better that teams want to migrate, not just making the old platform so bad they have to.</p>
+
+            <p>Talk soon,</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-94.html">Next: Issue #94 - Platform observability: what to measure and why →</a></p>
+                <p><a href="newsletter-92.html">← Previous: Issue #92 - The platform team burnout problem</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #90 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #90</h1>
+            <h2>How to design platform APIs that developers actually want to use</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>Platform APIs are the hidden foundation of developer experience. Get them right, and your platform feels intuitive and powerful. Get them wrong, and developers will build workarounds.</p>
+
+            <p>I've reviewed dozens of platform APIs over the years. Here are the patterns that separate the good from the great.</p>
+
+            <h3>API Design Philosophy</h3>
+
+            <h4>Design for the 90% use case</h4>
+            <p>Your API should make common tasks trivial and complex tasks possible. Don't optimize for edge cases at the expense of everyday workflows.</p>
+
+            <h4>Progressive disclosure</h4>
+            <p>Start simple, then expose complexity as needed. New users should be able to accomplish basic tasks with minimal configuration.</p>
+
+            <h4>Principle of least surprise</h4>
+            <p>Developers should be able to guess how your API works based on conventions they already know.</p>
+
+            <h3>Practical API Design Patterns</h3>
+
+            <h4>Resource-oriented design</h4>
+            <p>Structure your APIs around resources (applications, environments, databases) rather than actions. This makes APIs more predictable:</p>
+
+            <p><strong>Good:</strong></p>
+            <ul>
+                <li>GET /applications/{id}</li>
+                <li>POST /applications</li>
+                <li>PUT /applications/{id}/scale</li>
+            </ul>
+
+            <p><strong>Not so good:</strong></p>
+            <ul>
+                <li>GET /getApplication?id=123</li>
+                <li>POST /createApplication</li>
+                <li>POST /scaleApplication</li>
+            </ul>
+
+            <h4>Consistent naming conventions</h4>
+            <p>Pick naming conventions and stick to them across all endpoints:</p>
+            <ul>
+                <li>Use kebab-case for URLs: /deployment-configs</li>
+                <li>Use camelCase for JSON fields: deploymentConfig</li>
+                <li>Use consistent terminology: always "application" not sometimes "app"</li>
+            </ul>
+
+            <h4>Meaningful HTTP status codes</h4>
+            <p>Use status codes correctly:</p>
+            <ul>
+                <li>200: Success</li>
+                <li>201: Created successfully</li>
+                <li>400: Client error (bad request format)</li>
+                <li>401: Authentication required</li>
+                <li>403: Forbidden (authenticated but not authorized)</li>
+                <li>404: Not found</li>
+                <li>409: Conflict (resource already exists)</li>
+                <li>500: Internal server error</li>
+            </ul>
+
+            <h3>Developer Experience Priorities</h3>
+
+            <h4>Idempotency</h4>
+            <p>Make operations idempotent where possible. Running the same API call multiple times should have the same result:</p>
+
+            <p><strong>Good:</strong> PUT /applications/my-app/config (updating configuration)</p>
+            <p><strong>Requires care:</strong> POST /applications/my-app/restart (restarting multiple times)</p>
+
+            <h4>Batch operations</h4>
+            <p>Provide batch endpoints for operations that developers commonly need to do in bulk:</p>
+            <ul>
+                <li>POST /applications/batch (create multiple applications)</li>
+                <li>PUT /applications/batch/scale (scale multiple applications)</li>
+            </ul>
+
+            <h4>Async operations with status tracking</h4>
+            <p>For long-running operations, return immediately with a status endpoint:</p>
+
+            <pre><code>POST /applications/{id}/deploy
+Returns: 202 Accepted
+{
+  "operationId": "deploy-123",
+  "status": "pending",
+  "statusUrl": "/operations/deploy-123"
+}
+</code></pre>
+
+            <h3>Error Handling That Doesn't Suck</h3>
+
+            <h4>Structured error responses</h4>
+            <p>Provide consistent error response format:</p>
+
+            <pre><code>{
+  "error": {
+    "code": "VALIDATION_FAILED",
+    "message": "Deployment configuration is invalid",
+    "details": [
+      {
+        "field": "replicas",
+        "message": "Must be between 1 and 100"
+      }
+    ]
+  }
+}
+</code></pre>
+
+            <h4>Actionable error messages</h4>
+            <p><strong>Bad:</strong> "Invalid configuration"</p>
+            <p><strong>Good:</strong> "Memory limit '512MB' is below the minimum required '1GB' for this application type"</p>
+
+            <h4>Error codes for programmatic handling</h4>
+            <p>Include machine-readable error codes so developers can handle specific errors programmatically.</p>
+
+            <h3>Documentation That Developers Actually Use</h3>
+
+            <h4>OpenAPI specifications</h4>
+            <p>Provide complete OpenAPI (Swagger) specs. This enables:</p>
+            <ul>
+                <li>Interactive API documentation</li>
+                <li>Automated client generation</li>
+                <li>API testing tools</li>
+                <li>Contract testing</li>
+            </ul>
+
+            <h4>Runnable examples</h4>
+            <p>Every API endpoint should have working code examples in multiple languages:</p>
+
+            <pre><code># Create application
+curl -X POST /api/v1/applications \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "my-app",
+    "image": "nginx:latest",
+    "replicas": 3
+  }'
+</code></pre>
+
+            <h4>Use case-driven documentation</h4>
+            <p>Organize documentation around what developers want to accomplish, not just listing all endpoints:</p>
+            <ul>
+                <li>"Deploying your first application"</li>
+                <li>"Setting up automated deployments"</li>
+                <li>"Managing application configuration"</li>
+                <li>"Debugging deployment failures"</li>
+            </ul>
+
+            <h3>Versioning Strategy</h3>
+
+            <h4>URL-based versioning</h4>
+            <p>Include version in the URL for clarity:</p>
+            <ul>
+                <li>/api/v1/applications</li>
+                <li>/api/v2/applications</li>
+            </ul>
+
+            <h4>Backwards compatibility</h4>
+            <p>Maintain backwards compatibility within major versions:</p>
+            <ul>
+                <li>Add new fields, don't remove old ones</li>
+                <li>Add new endpoints, don't break existing ones</li>
+                <li>Provide migration paths for breaking changes</li>
+            </ul>
+
+            <h4>Deprecation process</h4>
+            <p>When you need to break compatibility:</p>
+            <ol>
+                <li>Announce deprecation with 6+ months notice</li>
+                <li>Add deprecation warnings to responses</li>
+                <li>Provide migration documentation</li>
+                <li>Support old and new versions concurrently</li>
+                <li>Remove old version only after migration period</li>
+            </ol>
+
+            <h3>Authentication and Authorization</h3>
+
+            <h4>Clear authentication model</h4>
+            <p>Make authentication requirements obvious:</p>
+            <ul>
+                <li>Use standard methods (API keys, OAuth, JWT)</li>
+                <li>Document authentication clearly</li>
+                <li>Provide clear error messages for auth failures</li>
+            </ul>
+
+            <h4>Scope-based permissions</h4>
+            <p>Use scoped permissions that align with how teams actually work:</p>
+            <ul>
+                <li>applications:read (can view applications)</li>
+                <li>applications:write (can create/update applications)</li>
+                <li>applications:deploy (can deploy applications)</li>
+            </ul>
+
+            <h3>Performance and Reliability</h3>
+
+            <h4>Pagination for list endpoints</h4>
+            <p>Always paginate list responses:</p>
+
+            <pre><code>{
+  "items": [...],
+  "pagination": {
+    "total": 156,
+    "page": 1,
+    "pageSize": 20,
+    "hasNext": true,
+    "nextUrl": "/applications?page=2"
+  }
+}
+</code></pre>
+
+            <h4>Rate limiting</h4>
+            <p>Implement and communicate rate limits:</p>
+            <ul>
+                <li>Include rate limit headers in responses</li>
+                <li>Provide clear error messages when limits are exceeded</li>
+                <li>Offer different limits for different types of operations</li>
+            </ul>
+
+            <h4>Caching headers</h4>
+            <p>Use appropriate caching headers to reduce unnecessary requests.</p>
+
+            <h3>Testing Your API Design</h3>
+
+            <h4>User journey testing</h4>
+            <p>Test common user journeys end-to-end:</p>
+            <ul>
+                <li>New developer creates their first application</li>
+                <li>Experienced developer sets up CI/CD integration</li>
+                <li>Team lead manages applications for their team</li>
+            </ul>
+
+            <h4>SDK development</h4>
+            <p>Build SDKs for popular languages. This forces you to think about how your API feels to use programmatically.</p>
+
+            <h4>Developer feedback sessions</h4>
+            <p>Regular sessions where actual developers use your API and provide feedback on the experience.</p>
+
+            <h3>The Goal: Invisible Excellence</h3>
+
+            <p>The best platform APIs are invisible. Developers accomplish what they need without thinking about the API design.</p>
+
+            <p>They just work.</p>
+
+            <p>That's the standard to aim for.</p>
+
+            <p>Talk soon,</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-91.html">Next: Issue #91 - Platform economics: build vs. buy decisions →</a></p>
+                <p><a href="newsletter-89.html">← Previous: Issue #89 - The three types of platform users</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

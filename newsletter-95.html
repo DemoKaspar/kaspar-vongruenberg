@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #95 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #95</h1>
+            <h2>The hidden costs of platform complexity</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>I was talking to a platform engineer yesterday who said something that stuck with me:</p>
+
+            <p>"Our platform does everything we wanted it to do. The problem is, now nobody understands how it works."</p>
+
+            <p>This is the hidden cost of platform complexity. You build a beautiful, feature-rich platform that solves every edge case and supports every use case. But in doing so, you've created something that's impossible to operate, debug, or extend.</p>
+
+            <h3>How Platforms Become Too Complex</h3>
+
+            <h4>Feature creep</h4>
+            <p>Every team has a slightly different need. Instead of saying "that's not our use case," you add another configuration option. Repeat this 100 times and you have a platform that can do everything but is impossible to understand.</p>
+
+            <h4>Abstraction layers upon abstraction layers</h4>
+            <p>You abstract Kubernetes with Helm charts, then abstract Helm with a custom CLI, then abstract the CLI with a web interface. Each layer hides complexity but also makes debugging harder.</p>
+
+            <h4>The "one more tool" syndrome</h4>
+            <p>There's a new tool that solves a specific problem beautifully. So you integrate it. Then another. Soon you have 47 different tools in your platform stack.</p>
+
+            <h4>Premature generalization</h4>
+            <p>Instead of building for your current use cases, you try to build for every possible future use case. The result is over-engineered solutions for simple problems.</p>
+
+            <h3>The Real Cost of Complexity</h3>
+
+            <p>Complex platforms create hidden costs:</p>
+
+            <h4>Cognitive overhead</h4>
+            <p>Developers spend more time understanding the platform than using it. New team members take months to become productive.</p>
+
+            <h4>Debugging nightmares</h4>
+            <p>When something goes wrong, you need to debug across 12 different systems. Simple issues take hours to resolve.</p>
+
+            <h4>Platform team burnout</h4>
+            <p>Your platform team spends all their time supporting edge cases and fixing integration issues. They have no time for strategic improvements.</p>
+
+            <h4>Adoption resistance</h4>
+            <p>Teams look at your platform and think "this looks complicated" so they build workarounds instead of adopting it.</p>
+
+            <h3>Simplicity as a Platform Strategy</h3>
+
+            <p>The best platforms I've seen prioritize simplicity over features. Here's how:</p>
+
+            <h4>The 80/20 rule for platform features</h4>
+            <p>Build for the 80% use case. Let the 20% edge cases find workarounds or use escape hatches. Don't compromise the 80% for the 20%.</p>
+
+            <h4>Prefer composition over configuration</h4>
+            <p>Instead of building one tool with 100 configuration options, build 5 simple tools that work well together.</p>
+
+            <h4>Ruthless deprecation</h4>
+            <p>Regularly remove features that aren't being used. Every line of code in your platform has a maintenance cost.</p>
+
+            <h4>Clear abstraction boundaries</h4>
+            <p>Each layer in your platform should have a clear, well-defined interface. Avoid "leaky abstractions" that expose underlying complexity.</p>
+
+            <h3>Practical Simplicity Guidelines</h3>
+
+            <h4>The "explain it to a junior developer" test</h4>
+            <p>If you can't explain how your platform works to a junior developer in 10 minutes, it's probably too complex.</p>
+
+            <h4>The "single point of failure" rule</h4>
+            <p>Any part of your platform should be explainable by one person. If it takes your whole team to understand a component, simplify it.</p>
+
+            <h4>The "5-minute deployment" goal</h4>
+            <p>New users should be able to deploy something successful within 5 minutes of getting platform access. If it takes longer, your onboarding is too complex.</p>
+
+            <h4>The "documentation burden" metric</h4>
+            <p>If your platform requires more than 50 pages of documentation to use effectively, you probably need to simplify.</p>
+
+            <h3>When to Accept Complexity</h3>
+
+            <p>Sometimes complexity is necessary:</p>
+            <ul>
+                <li>When you're solving genuinely complex problems (security, compliance, multi-region deployments)</li>
+                <li>When the complexity is hidden behind simple interfaces</li>
+                <li>When the alternative is every team building their own complex solution</li>
+            </ul>
+
+            <p>But even then, constantly ask: "Is there a simpler way?"</p>
+
+            <h3>Simplifying Existing Platforms</h3>
+
+            <p>If your platform is already too complex:</p>
+
+            <ol>
+                <li><strong>Audit your features</strong> - What percentage of your users actually use each feature?</li>
+                <li><strong>Map the critical paths</strong> - What workflows do 90% of your users follow?</li>
+                <li><strong>Identify complexity debt</strong> - What parts of your platform are hardest to explain/maintain?</li>
+                <li><strong>Plan the simplification</strong> - What can you remove, consolidate, or redesign?</li>
+                <li><strong>Communicate the changes</strong> - Help users understand why simplification helps them too</li>
+            </ol>
+
+            <h3>The Paradox of Platform Design</h3>
+
+            <p>Simple platforms are harder to build than complex ones. It takes more thought, more discipline, and more courage to say no.</p>
+
+            <p>But simple platforms are what teams actually want to use.</p>
+
+            <p>Choose simplicity. Your users (and your future self) will thank you.</p>
+
+            <p>Talk soon,</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-96.html">Next: Issue #96 - Platform security: shift left, but not too far left →</a></p>
+                <p><a href="newsletter-94.html">← Previous: Issue #94 - Platform observability: what to measure and why</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

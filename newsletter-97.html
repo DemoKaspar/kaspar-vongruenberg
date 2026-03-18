@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #97 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #97</h1>
+            <h2>Why your platform needs an API strategy</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>Last week I was reviewing a platform architecture, and I asked a simple question: "How do teams interact with your platform programmatically?"</p>
+
+            <p>The answer: "Well, they can use our web interface, or... submit a ticket?"</p>
+
+            <p>This is a massive missed opportunity. Your platform's APIs aren't just technical implementation details—they're the foundation of how teams will actually use your platform.</p>
+
+            <h3>APIs Are Your Platform's User Interface</h3>
+
+            <p>Think about it: developers don't want to click through web forms to provision infrastructure. They want to include infrastructure provisioning in their CI/CD pipelines, their infrastructure as code, their automation scripts.</p>
+
+            <p>If your platform doesn't have a comprehensive API strategy, you're forcing teams to work around you instead of with you.</p>
+
+            <h3>What Makes a Good Platform API?</h3>
+
+            <h4>1. RESTful and predictable</h4>
+            <p>Follow REST conventions. Use standard HTTP status codes. Be consistent in your naming and response formats. Developers should be able to guess how your API works.</p>
+
+            <h4>2. Comprehensive</h4>
+            <p>Everything that can be done through your web interface should be possible via API. If teams can provision a database through your portal, they should be able to do it via API too.</p>
+
+            <h4>3. Well-documented</h4>
+            <p>OpenAPI specs, code examples, SDKs in popular languages. Your API documentation is your developer marketing—invest in it.</p>
+
+            <h4>4. Idempotent</h4>
+            <p>Running the same API call twice should have the same result as running it once. This makes automation much more reliable.</p>
+
+            <h4>5. Properly versioned</h4>
+            <p>Have a clear versioning strategy. Don't break existing integrations when you add new features.</p>
+
+            <h3>The Three Layers of Platform APIs</h3>
+
+            <p>I typically see successful platforms expose APIs at three levels:</p>
+
+            <h4>Core Platform APIs</h4>
+            <p>The fundamental building blocks: compute, storage, networking, databases. These are your "infrastructure primitives."</p>
+
+            <h4>Service Template APIs</h4>
+            <p>Higher-level abstractions: "create a web service," "spin up a batch job," "provision a data pipeline." These encode your golden paths.</p>
+
+            <h4>Workflow APIs</h4>
+            <p>End-to-end processes: "deploy this application," "create an environment," "run this migration." These represent complete user journeys.</p>
+
+            <h3>API Strategy in Practice</h3>
+
+            <p>Here's what I typically recommend:</p>
+
+            <h4>Start with the golden paths</h4>
+            <p>Don't try to API-fy everything at once. Start with your most common use cases and work outward.</p>
+
+            <h4>Design APIs alongside UIs</h4>
+            <p>Your web interface and APIs should be built together, not as an afterthought. Often, your web interface should just be a consumer of your APIs.</p>
+
+            <h4>Provide multiple levels of abstraction</h4>
+            <p>Some teams want low-level control, others want high-level convenience. Support both.</p>
+
+            <h4>Invest in client libraries</h4>
+            <p>SDKs in Go, Python, and JavaScript will dramatically improve adoption. Don't make teams write HTTP clients from scratch.</p>
+
+            <h3>The Business Case for Platform APIs</h3>
+
+            <p>Good platform APIs enable:</p>
+            <ul>
+                <li><strong>Self-service adoption</strong> - Teams can integrate with your platform without tickets or meetings</li>
+                <li><strong>Automation</strong> - Infrastructure can be managed through CI/CD pipelines</li>
+                <li><strong>Integration</strong> - Your platform can work with existing tools and workflows</li>
+                <li><strong>Innovation</strong> - Teams can build new solutions on top of your platform</li>
+            </ul>
+
+            <h3>Common API Mistakes to Avoid</h3>
+
+            <ul>
+                <li><strong>Exposing internal implementation details</strong> - Your API should be stable even when your implementation changes</li>
+                <li><strong>Inconsistent error handling</strong> - Use standard HTTP status codes and consistent error message formats</li>
+                <li><strong>No rate limiting</strong> - Protect your platform from runaway scripts</li>
+                <li><strong>Ignoring authentication</strong> - Have a clear strategy for API keys, OAuth, or whatever auth mechanism fits your organization</li>
+            </ul>
+
+            <h3>The Bottom Line</h3>
+
+            <p>Your platform's APIs determine how easily teams can adopt and integrate with your platform. Great APIs turn your platform into infrastructure that teams want to build on top of.</p>
+
+            <p>Bad APIs turn your platform into a bottleneck that teams work around.</p>
+
+            <p>Invest in your API strategy. Your adoption metrics will thank you.</p>
+
+            <p>Talk soon,</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-98.html">Next: Issue #98 - The platform team's guide to saying "no" (nicely) →</a></p>
+                <p><a href="newsletter-96.html">← Previous: Issue #96 - Platform security: shift left, but not too far left</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

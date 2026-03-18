@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #108 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #108</h1>
+            <h2>"Deployment to Darkness": designing platforms for highly secure environments</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>I'm somehow living my autumn of high security platforming with several government agencies and banks I'm working with. They all share similar characteristics so I thought I would spend some time video-recording an episode of "Building Platforms with Kaspar" and show you a demo I built. At Humanitec we have just launched the "self-hosted Platform Orchestrator" to meet the requirements of exactly that group. It's capable of running on your network and can orchestrate and compute type and any resource in any IaC format. Really the distilled learning of 8 years building Orchestrators.</p>
+
+            <p>If you've worked with banks, insurance companies, government agencies, or defense contractors, you know their deployment requirements differ fundamentally from a typical cloud-native setup. Air-gapped networks, multiple data centers across regulatory zones, strict data residency laws, PCI compliance and these really aren't edge cases. They're the baseline.</p>
+
+            <p>My key recommendations in all these cases is a strict separation of concern and a high level of abstraction. In security setups in general I recommend designing for what I call "Deployment to Darkness" scenarios. DtD scenarios are deployment situations where the developer is not aware about where the code will end up running. They are aware of abstract specifications like "requires database of type A with specs B" but whether this runs in an air-gapped offsite location, on a mining truck or in space is not something that matters to them. If you are a bank, why would you bother? Simply because following this principle leads to high degrees of standardization and portability.</p>
+
+            <h3>The Setup is Relatively Simple</h3>
+
+            <p>Developers just focus on app code and application configurations and you manifest file that describes what resource types are required for the workload and what parameterized variables are set. That's it, the developers do not need to mingle with any infra code (nor do they need to request anything). That spec gets sent to an Orchestrator and it's now the Orchestrators job to pick the right infra configs, create the infrastructure and wire everything up. The Orchestrator will of course use the configurations provided by the platform or infrastructure team to configure the target.</p>
+
+            <p>But you see what happens here. The developer can just describe what their workload in general needs, she can then say "deploy this to environment X" and the final configuration etc. is enforced by the Orchestrator. This leads to perfect repeatability, the option to fleet update resources, enforces security and guarantees portability.</p>
+
+            <h3>Why This Works in Regulated Environments</h3>
+
+            <p>Contrary to common belief I love platform building in highly regulated environments because users are way more receptive to high automation and faster cycles. I used everything in this blog post and would love to discuss this in a webinar soon, will let you know once this is set up. We will for sure have a panel discussion at PlatformCon26 on this!</p>
+
+            <p>The benefits of Deployment to Darkness include:</p>
+
+            <ul>
+                <li><strong>Perfect standardization:</strong> All deployments follow the same patterns regardless of target environment</li>
+                <li><strong>Enhanced security:</strong> Developers never need access to production infrastructure details</li>
+                <li><strong>Regulatory compliance:</strong> Consistent audit trails and policy enforcement</li>
+                <li><strong>Portability:</strong> Applications can run anywhere without modification</li>
+                <li><strong>Reduced complexity:</strong> Developers focus on business logic, not infrastructure concerns</li>
+            </ul>
+
+            <h3>Implementation Patterns</h3>
+
+            <p>The key patterns I see working in these environments:</p>
+
+            <p><strong>Strict separation of concerns:</strong> Application code and infrastructure definitions never mix. Developers work with application manifests that describe needs, not implementation details.</p>
+
+            <p><strong>Centralized orchestration:</strong> A single orchestrator manages the translation from application requirements to infrastructure reality, ensuring consistency and compliance.</p>
+
+            <p><strong>Policy-driven deployment:</strong> All security, compliance, and operational policies are encoded in the orchestrator, not left to individual teams to implement.</p>
+
+            <p><strong>Environment abstraction:</strong> Developers think in terms of "development," "staging," and "production" without needing to know the underlying infrastructure topology.</p>
+
+            <h3>Looking Forward</h3>
+
+            <p>This approach isn't just for highly regulated industries - it's a glimpse into the future of all platform engineering. As systems become more complex and security requirements increase, the ability to deploy applications without knowing infrastructure details becomes increasingly valuable.</p>
+
+            <p>Cheers</p>
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-107.html">← Previous: Issue #107 - How do you build roadmaps for platforms?</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

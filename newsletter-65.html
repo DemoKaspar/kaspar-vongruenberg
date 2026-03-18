@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #65 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #65</h1>
+            <h2>Platform engineering: Why serve the 80% vs pleasing everybody</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>Issue #65! Today I want to tackle one of the most fundamental challenges in platform engineering: the tension between serving the majority of users well versus trying to accommodate every possible use case.</p>
+
+            <p>This is something every platform team struggles with, and getting it wrong can doom your platform to irrelevance or unusability.</p>
+
+            <h3>The Perfectionist Trap</h3>
+
+            <p>I've seen too many platform teams fall into the perfectionist trap. They try to build a platform that handles every conceivable use case, supports every possible technology choice, and accommodates every team's unique requirements.</p>
+
+            <p>The result? A platform that's so complex and flexible that it's effectively unusable for most teams. It requires deep platform knowledge to use effectively, has inconsistent interfaces, and provides little value over teams just managing their own infrastructure directly.</p>
+
+            <p>Here's the counterintuitive truth: the best platforms are opinionated and constrained, not flexible and comprehensive.</p>
+
+            <h3>The 80/20 Rule in Platform Engineering</h3>
+
+            <p>In platform engineering, the 80/20 rule is your friend:</p>
+
+            <p><strong>80% of your users have 20% of the use cases.</strong> Most developers are building standard web applications, APIs, and batch jobs. They need databases, caches, message queues, and load balancers. They want to deploy code, roll back changes, and monitor health.</p>
+
+            <p><strong>20% of your users have 80% of the use cases.</strong> Some teams have unique requirements - exotic databases, complex networking, specialized hardware, compliance constraints that require custom configurations.</p>
+
+            <p>The platform paradox: if you try to serve 100% of use cases, you'll serve 0% of them well. But if you focus on the 80%, you can serve them exceptionally well while still providing escape hatches for the 20%.</p>
+
+            <h3>What Serving the 80% Looks Like</h3>
+
+            <p>Platforms that focus on the 80% share some common characteristics:</p>
+
+            <p><strong>Strong defaults:</strong> Most configurations work out of the box without customization. A new service gets reasonable CPU/memory limits, health checks, load balancing, and observability without any additional configuration.</p>
+
+            <p><strong>Limited choices:</strong> Instead of supporting 15 different databases, they support 3 well-configured options that cover most use cases. Instead of infinite configuration options, they provide a small set of common patterns.</p>
+
+            <p><strong>Consistent interfaces:</strong> The same commands work for all services. The same patterns apply across different resource types. Once you learn how to deploy one service, you can deploy any service.</p>
+
+            <p><strong>Self-service by default:</strong> The common path should require zero interaction with the platform team. Developers should be able to deploy, scale, and manage standard workloads without tickets or approval processes.</p>
+
+            <h3>Real-World Examples</h3>
+
+            <p>Let me give you some concrete examples of what this looks like:</p>
+
+            <p><strong>Database provisioning:</strong> Instead of supporting every database technology, provide 3 options - a relational database (PostgreSQL), a cache (Redis), and a document store (MongoDB). Each one comes with sensible defaults for backup, monitoring, and scaling.</p>
+
+            <p><strong>Deployment patterns:</strong> Instead of supporting every possible deployment strategy, provide 2 patterns - blue/green for stateless services and rolling updates for services that can handle gradual rollouts.</p>
+
+            <p><strong>Monitoring and alerting:</strong> Instead of letting teams configure custom dashboards and alerts, provide standard observability for common metrics (response time, error rate, throughput) with sensible thresholds.</p>
+
+            <p><strong>Resource sizing:</strong> Instead of requiring teams to specify exact CPU and memory requirements, provide T-shirt sizes (small, medium, large) that map to tested resource allocations.</p>
+
+            <h3>Handling the 20%</h3>
+
+            <p>But what about teams with special requirements? The key is providing escape hatches that don't break the platform abstraction:</p>
+
+            <p><strong>Configuration overrides:</strong> Allow teams to override specific settings while keeping the rest of the standard configuration.</p>
+
+            <p><strong>Custom resource types:</strong> Provide a way for teams to define their own resource types that integrate with the platform's lifecycle management.</p>
+
+            <p><strong>Direct infrastructure access:</strong> For truly unique requirements, provide a way for teams to manage their own infrastructure while still integrating with platform services like CI/CD and monitoring.</p>
+
+            <p><strong>Graduated complexity:</strong> Make it easy to start with standard patterns and gradually add complexity as requirements become clearer.</p>
+
+            <h3>The Benefits Are Compounding</h3>
+
+            <p>When you focus on serving the 80% exceptionally well, several good things happen:</p>
+
+            <p><strong>Higher adoption:</strong> Teams choose your platform because it makes their lives easier, not because they're forced to use it.</p>
+
+            <p><strong>Network effects:</strong> As more teams use the standard patterns, they become better tested, documented, and optimized.</p>
+
+            <p><strong>Reduced support burden:</strong> Most teams can be successful without help, freeing up the platform team to focus on harder problems.</p>
+
+            <p><strong>Easier evolution:</strong> Changes to well-defined patterns affect many users, creating incentive and resources for proper testing and migration support.</p>
+
+            <h3>Common Mistakes</h3>
+
+            <p>Here are some ways teams go wrong when trying to implement this approach:</p>
+
+            <p><strong>Choosing the wrong 80%:</strong> Don't guess at what the common use cases are. Survey your developers, analyze existing deployments, and validate assumptions with real usage data.</p>
+
+            <p><strong>No escape hatches:</strong> If your platform can't handle edge cases at all, those teams will build parallel infrastructure, fragmenting your ecosystem.</p>
+
+            <p><strong>Rigid abstractions:</strong> Your standard patterns should be extensible and composable. Teams should be able to build on them, not just use them as-is.</p>
+
+            <p><strong>Ignoring feedback:</strong> The 80/20 split isn't static. As your organization evolves, the common use cases will change too.</p>
+
+            <h3>Measuring Success</h3>
+
+            <p>How do you know if you're serving the 80% well?</p>
+
+            <p><strong>Adoption metrics:</strong> What percentage of eligible workloads are using the platform? Are teams choosing it voluntarily or being forced?</p>
+
+            <p><strong>Time to value:</strong> How long does it take for a team to deploy their first service? How much platform knowledge is required?</p>
+
+            <p><strong>Support ticket volume:</strong> Are teams able to be successful self-service, or do they need constant help from the platform team?</p>
+
+            <p><strong>Escape hatch usage:</strong> What percentage of teams need to use custom configurations or workarounds? This should be low but not zero.</p>
+
+            <p><strong>Developer satisfaction:</strong> Survey developers regularly about their platform experience. They'll tell you if you're solving the right problems.</p>
+
+            <h3>Evolution Over Time</h3>
+
+            <p>Your 80% will change as your organization matures:</p>
+
+            <p><strong>Early stage:</strong> Focus on basic deployment, monitoring, and database provisioning. Teams just want to get code running reliably.</p>
+
+            <p><strong>Growth stage:</strong> Add more sophisticated patterns for scaling, performance optimization, and operational excellence as teams become more sophisticated.</p>
+
+            <p><strong>Mature stage:</strong> Focus on specialized patterns for security, compliance, multi-region deployment, and advanced operational scenarios.</p>
+
+            <p>The key is evolving the platform based on actual user needs, not theoretical requirements.</p>
+
+            <h3>Platform Design Philosophy</h3>
+
+            <p>This approach reflects a broader philosophy about platform design:</p>
+
+            <p><strong>Platforms should have opinions.</strong> Don't try to be all things to all people. Make choices about the right way to do common things.</p>
+
+            <p><strong>Constraint enables creativity.</strong> When developers don't have to make infrastructure decisions, they can focus on solving business problems.</p>
+
+            <p><strong>Standards create leverage.</strong> When most teams use the same patterns, improvements benefit everyone.</p>
+
+            <p><strong>Exceptions prove the rule.</strong> Edge cases help you understand where your abstractions break down and need improvement.</p>
+
+            <h3>The Hard Conversation</h3>
+
+            <p>Implementing this philosophy requires some difficult conversations with stakeholders:</p>
+
+            <p>"No, we won't support that obscure database technology unless you can show it's needed by multiple teams."</p>
+
+            <p>"No, we won't build that custom deployment pattern for your one-off use case, but here's how you can implement it yourself while still using the platform."</p>
+
+            <p>"Yes, this means some teams will need to change how they do things, but the benefits to the organization outweigh the migration costs."</p>
+
+            <p>These conversations are hard, but they're necessary for building platforms that actually improve developer productivity at scale.</p>
+
+            <h3>The Long Game</h3>
+
+            <p>Building platforms that serve the 80% is a long-term strategy that pays dividends over time. It requires discipline to say no to requests that would compromise the core experience, but it results in platforms that developers actually want to use.</p>
+
+            <p>The goal isn't to make everyone happy - it's to make most people significantly more productive while still providing paths for exceptions.</p>
+
+            <p>What's your experience with balancing standardization and flexibility in platform design? How do you decide what use cases to optimize for?</p>
+
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-66.html">Next: Issue #66 - Pull app and platform-code apart, embrace specialization →</a></p>
+                <p><a href="newsletter-64.html">← Previous: Issue #64 - Platforming well done is ultimately about structuring git repositories</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

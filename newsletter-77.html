@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #77 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #77</h1>
+            <h2>Silos are fantastic</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>Issue #77! Today I want to defend something that's become a dirty word in our industry: silos.</p>
+
+            <p>Everyone talks about "breaking down silos" as if silos are inherently bad. But I think we've misunderstood what silos are and why they exist. Good silos are actually essential for building scalable organizations and effective platforms.</p>
+
+            <p>The problem isn't silos themselves - it's badly designed silos with poor interfaces.</p>
+
+            <h3>Why Silos Exist</h3>
+
+            <p>Silos aren't organizational failures - they're organizational adaptations. They exist because:</p>
+
+            <p><strong>Specialization creates efficiency:</strong> A team that focuses on databases will be better at database management than a team that does databases, networking, security, and frontend development.</p>
+
+            <p><strong>Context switching is expensive:</strong> When teams have to understand too many different domains, they spend more time switching contexts than actually building things.</p>
+
+            <p><strong>Expertise requires focus:</strong> Deep knowledge in any technical domain requires sustained attention and practice. You can't become a Kubernetes expert if you're also trying to master machine learning, database optimization, and security.</p>
+
+            <p><strong>Accountability needs boundaries:</strong> Clear ownership is impossible without clear boundaries. If everything is everyone's responsibility, nothing is anyone's responsibility.</p>
+
+            <h3>The Good Silo vs. Bad Silo</h3>
+
+            <p>The difference between good silos and bad silos isn't whether they exist - it's how well they're designed.</p>
+
+            <p><strong>Bad silos:</strong></p>
+            <ul>
+                <li>Have unclear interfaces and handoff points</li>
+                <li>Optimize for their own efficiency at the expense of overall flow</li>
+                <li>Communicate primarily through tickets and formal processes</li>
+                <li>Make decisions without understanding downstream impact</li>
+                <li>Hoard information and expertise</li>
+            </ul>
+
+            <p><strong>Good silos:</strong></p>
+            <ul>
+                <li>Have well-defined APIs and service boundaries</li>
+                <li>Optimize for the success of their customers (other teams)</li>
+                <li>Communicate through self-service interfaces and clear documentation</li>
+                <li>Understand and measure their impact on overall system performance</li>
+                <li>Share knowledge and enable others to be successful</li>
+            </ul>
+
+            <h3>Platform Engineering as Silo Design</h3>
+
+            <p>This is why I think platform engineering is fundamentally about designing good silos. Platform teams create boundaries and interfaces that allow other teams to be more effective.</p>
+
+            <p>Think about what a platform team does:</p>
+
+            <p><strong>They create abstraction boundaries:</strong> Application teams don't need to understand Kubernetes internals because the platform abstracts that complexity away.</p>
+
+            <p><strong>They define service interfaces:</strong> Instead of application teams manually configuring load balancers, they use platform APIs that handle load balancing automatically.</p>
+
+            <p><strong>They enable self-service:</strong> Instead of requiring tickets and manual processes, they build tools that let other teams accomplish their goals independently.</p>
+
+            <p><strong>They optimize for customer success:</strong> Platform teams measure their success based on how productive they make application teams, not how sophisticated their infrastructure is.</p>
+
+            <h3>The Interface Design Problem</h3>
+
+            <p>Most organizational problems blamed on "silos" are actually interface design problems.</p>
+
+            <p>For example:</p>
+
+            <p><strong>The problem:</strong> "The security team is a bottleneck. Every change requires a security review that takes two weeks."</p>
+
+            <p><strong>The silo-breaking solution:</strong> "Let's embed security engineers in every product team."</p>
+
+            <p><strong>The interface design solution:</strong> "Let's build security policies into the platform so that compliant deployments are automatic and non-compliant deployments are impossible."</p>
+
+            <p>The interface design solution preserves the specialized expertise while eliminating the bottleneck.</p>
+
+            <h3>Platform Interfaces vs. Team Interfaces</h3>
+
+            <p>One insight I've had recently: the best platform teams don't just build technical interfaces (APIs, CLIs, UIs) - they also design organizational interfaces.</p>
+
+            <p>They think about:</p>
+            <ul>
+                <li>How should other teams interact with the platform team?</li>
+                <li>When should teams self-serve vs. ask for help?</li>
+                <li>How should feature requests and bug reports flow?</li>
+                <li>How should knowledge and expertise be shared?</li>
+                <li>How should the platform team communicate changes and updates?</li>
+            </ul>
+
+            <p>Great platform teams design these organizational interfaces as carefully as they design their technical interfaces.</p>
+
+            <h3>The Conway's Law Opportunity</h3>
+
+            <p>Conway's Law states that organizations design systems that mirror their communication structures. Most people treat this as a constraint, but I think it's an opportunity.</p>
+
+            <p>If you want to build modular, well-architected systems, design modular, well-architected organizations. Create teams with clear boundaries, well-defined interfaces, and strong internal cohesion.</p>
+
+            <p>This means:</p>
+            <ul>
+                <li><strong>Team boundaries should match system boundaries</strong> - don't split ownership of a service across multiple teams</li>
+                <li><strong>Team interfaces should match system interfaces</strong> - if two teams need to collaborate closely, their systems should integrate cleanly</li>
+                <li><strong>Team autonomy should match system autonomy</strong> - teams should be able to make changes to their systems without coordinating with other teams</li>
+            </ul>
+
+            <h3>The Self-Service Test</h3>
+
+            <p>Here's a simple test for whether your silos are well-designed: how much self-service do they enable?</p>
+
+            <p>Good silos make it easy for their customers (other teams) to accomplish their goals without direct interaction. Bad silos require constant coordination and communication.</p>
+
+            <p>Examples of good silo interfaces:</p>
+            <ul>
+                <li><strong>Platform team:</strong> Provides APIs for deploying applications, provisioning databases, and accessing logs</li>
+                <li><strong>Security team:</strong> Builds security scanning into CI/CD pipelines and provides compliant-by-default platform configurations</li>
+                <li><strong>Data team:</strong> Provides self-service analytics tools and data pipelines that product teams can use independently</li>
+            </ul>
+
+            <h3>Microservices and Micro-teams</h3>
+
+            <p>This is also why the microservices pattern works well with small, focused teams. Each service is owned by a team that can make changes independently, deploy on their own schedule, and optimize for their specific use case.</p>
+
+            <p>The key insight: the "micro" in microservices isn't just about service size - it's about team size and team autonomy.</p>
+
+            <p>A good microservice is owned by a team small enough to understand the entire service deeply, with interfaces clean enough that other teams can use it without understanding its internals.</p>
+
+            <h3>When Silos Go Wrong</h3>
+
+            <p>Silos become problematic when:</p>
+
+            <p><strong>Boundaries are in the wrong places:</strong> Splitting related functionality across teams creates coordination overhead and interface complexity.</p>
+
+            <p><strong>Interfaces are poorly designed:</strong> Complex, poorly documented interfaces make it hard for other teams to be successful.</p>
+
+            <p><strong>Teams optimize locally:</strong> When teams optimize for their own metrics instead of overall system performance, silos become competitive instead of collaborative.</p>
+
+            <p><strong>Knowledge isn't shared:</strong> When expertise is hoarded within silos, the organization becomes fragile and can't adapt to change.</p>
+
+            <h3>Building Better Silos</h3>
+
+            <p>If you want to build effective silos in your organization:</p>
+
+            <p><strong>Design boundaries thoughtfully:</strong> Team boundaries should minimize coordination requirements and maximize team autonomy.</p>
+
+            <p><strong>Invest in interface design:</strong> Good APIs, clear documentation, and self-service tools are force multipliers for organizational efficiency.</p>
+
+            <p><strong>Measure customer success:</strong> Teams should be measured on how well they enable their customers (other teams) to be successful.</p>
+
+            <p><strong>Share knowledge actively:</strong> Silos should develop expertise, but they shouldn't hoard it. Build systems for sharing knowledge across boundaries.</p>
+
+            <p><strong>Design for evolution:</strong> Silos and interfaces should be designed to evolve as the organization and technology change.</p>
+
+            <h3>The Platform Team as Interface Designer</h3>
+
+            <p>This is why I think the platform team's most important role isn't building infrastructure - it's designing interfaces that enable other teams to be successful.</p>
+
+            <p>The best platform teams think like API designers:</p>
+            <ul>
+                <li>How can we make common tasks simple?</li>
+                <li>How can we provide sensible defaults while allowing customization?</li>
+                <li>How can we evolve our interfaces without breaking existing users?</li>
+                <li>How can we make our interfaces discoverable and learnable?</li>
+                <li>How can we gather feedback and improve based on actual usage?</li>
+            </ul>
+
+            <h3>The Paradox</h3>
+
+            <p>Here's the paradox: the best way to break down bad silos is to build good silos. Well-designed boundaries and interfaces eliminate the coordination overhead and communication problems that make silos feel like barriers.</p>
+
+            <p>Instead of trying to eliminate specialization and boundaries, we should focus on designing better boundaries and interfaces.</p>
+
+            <p>What's your experience with silos? Have you seen examples of well-designed boundaries that enable autonomy and efficiency?</p>
+
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-78.html">Next: Issue #78 - Extending regards from the mouse →</a></p>
+                <p><a href="newsletter-76.html">← Previous: Issue #76 - Platform Engineering: a game</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

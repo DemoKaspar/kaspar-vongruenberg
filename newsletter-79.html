@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #79 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #79</h1>
+            <h2>Reference Architectures for GitOps based IDPs</h2>
+        </header>
+
+        <main>
+            <p>Hey {NAME},</p>
+
+            <p>I've been getting a lot of questions lately about reference architectures for GitOps-based Internal Developer Platforms. People want to understand how all the pieces fit together in practice.</p>
+
+            <p>So I thought I'd walk you through a few different patterns we see working well in production, and explain when you might choose one over another.</p>
+
+            <p><strong>Pattern 1: The Single Source of Truth</strong></p>
+
+            <p>This is probably the most common pattern we see:</p>
+            <ul>
+                <li>Application repos contain Score files (or similar workload specifications)</li>
+                <li>A single "platform config" repo contains all environment-specific configurations</li>
+                <li>A platform orchestrator (like Humanitec) reads from app repos, matches configurations from the platform repo, and generates final Kubernetes manifests</li>
+                <li>These manifests get written to a "gitops repo" that ArgoCD (or Flux) watches</li>
+            </ul>
+
+            <p>The big advantage here is simplicity - there's one place where all your platform configurations live, making it easy to maintain consistency and implement governance.</p>
+
+            <p>The downside is that as you scale, the platform repo can become a bottleneck. Every team needs to touch it to add new configurations or modify existing ones.</p>
+
+            <p><strong>Pattern 2: Federated Configuration</strong></p>
+
+            <p>This pattern distributes configuration ownership:</p>
+            <ul>
+                <li>Each team has their own "team platform repo" with their specific configurations</li>
+                <li>A central "base platform repo" contains shared/default configurations</li>
+                <li>The platform orchestrator reads from all these repos and merges configurations based on precedence rules</li>
+                <li>Final manifests still get generated to a centralized GitOps repo</li>
+            </ul>
+
+            <p>This pattern scales much better because teams can self-serve on configurations without creating bottlenecks. But it's more complex to set up and requires good governance to prevent teams from shooting themselves in the foot.</p>
+
+            <p><strong>Pattern 3: Environment-Specific GitOps</strong></p>
+
+            <p>Some organizations prefer to have separate GitOps repos per environment:</p>
+            <ul>
+                <li>Application repos still contain workload specs</li>
+                <li>Platform configurations are environment-specific</li>
+                <li>Separate GitOps repos for dev, staging, production</li>
+                <li>Different promotion processes between environments</li>
+            </ul>
+
+            <p>This pattern gives you maximum isolation between environments, which is great for security and compliance. But it can make it harder to ensure consistency across environments.</p>
+
+            <p><strong>Choosing the right pattern</strong></p>
+
+            <p>Your choice depends on a few factors:</p>
+
+            <p><strong>Team size and structure:</strong> If you have a small number of teams and centralized platform management, Pattern 1 works great. As you grow and need more team autonomy, Pattern 2 becomes more attractive.</p>
+
+            <p><strong>Compliance requirements:</strong> If you need strong environment isolation for regulatory reasons, Pattern 3 might be required.</p>
+
+            <p><strong>Platform team capacity:</strong> Pattern 1 requires the least setup but creates the most ongoing work for platform teams. Pattern 2 requires more sophisticated tooling but scales better.</p>
+
+            <p><strong>Common pitfalls to avoid</strong></p>
+
+            <p>Whatever pattern you choose, here are some things to watch out for:</p>
+            <ul>
+                <li><strong>Don't skip the workload specification layer.</strong> Going directly from app repos to GitOps repos without an abstraction layer makes it impossible to maintain environment consistency.</li>
+                <li><strong>Don't put environment-specific configuration in application repos.</strong> This defeats the purpose of having a platform and makes standardization impossible.</li>
+                <li><strong>Don't forget about secret management.</strong> Your GitOps repos shouldn't contain actual secrets - use tools like External Secrets Operator or Sealed Secrets.</li>
+                <li><strong>Don't ignore RBAC.</strong> Make sure your GitOps repos have proper access controls so teams can't modify each other's configurations.</li>
+            </ul>
+
+            <p><strong>Tooling recommendations</strong></p>
+
+            <p>For the platform orchestration layer, you need something that can read workload specs, apply configurations, and generate GitOps-ready manifests. Obviously I'm biased toward Humanitec, but there are other options like Backstage with the right plugins, or custom tooling built around Helm.</p>
+
+            <p>For GitOps, ArgoCD and Flux are both solid choices. ArgoCD has a nicer UI and better RBAC, Flux is more Kubernetes-native and has better Helm support.</p>
+
+            <p>For workload specifications, Score is obviously my preferred choice, but you could also use Helm values files or custom YAML schemas.</p>
+
+            <p>The key is making sure all these pieces work together smoothly and that your developers have a good experience throughout.</p>
+
+            <p>What pattern are you using? I'd love to hear about your experiences!</p>
+
+            <p>Kaspar</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-80.html">Next: Issue #80 - CNCF accepted Score & we'll double down on open source →</a></p>
+                <p><a href="newsletter-78.html">← Previous: Issue #78 - Extending regards from the mouse</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

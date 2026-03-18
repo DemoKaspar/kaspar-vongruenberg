@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Newsletter Issue #2 - Kaspar von Grünberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="newsletter.html">← Back to newsletter archive</a>
+        </div>
+        
+        <header>
+            <h1>Newsletter Issue #2</h1>
+            <h2>Developer Productivity & Experience [Issue 2]</h2>
+        </header>
+
+        <main>
+            <p>Hi Eric,</p>
+
+            <p>In our second installment of the Developer Productivity & Experience newsletter, I want to dive deeper into what we're seeing in the field when it comes to developer tooling and platform engineering.</p>
+
+            <p>Over the past few weeks, we've had conversations with teams at some incredible companies - from early-stage startups to Fortune 500 enterprises. The patterns that emerge are fascinating and I think worth sharing.</p>
+
+            <h3>The Platform Engineering Movement</h3>
+
+            <p>One trend that's becoming impossible to ignore is the rise of what we're calling "Platform Engineering." It's essentially the practice of building internal platforms that enable developer self-service and reduce operational overhead.</p>
+
+            <p>The best teams we've talked to are treating their internal platforms as products, with dedicated product managers and user research. They're not just throwing together a collection of tools - they're designing coherent experiences that abstract away infrastructure complexity while still giving developers the flexibility they need.</p>
+
+            <p><strong>Key characteristics of successful platform teams:</strong></p>
+            <ul>
+                <li>They measure developer productivity metrics obsessively</li>
+                <li>They prioritize developer experience over technical purity</li>
+                <li>They build abstractions that 80% of teams can use out of the box</li>
+                <li>They provide escape hatches for the remaining 20%</li>
+            </ul>
+
+            <h3>The Configuration Management Problem</h3>
+
+            <p>Almost every team we talk to struggles with the same fundamental issue: how do you manage application configuration across multiple environments without going insane?</p>
+
+            <p>The traditional approach of environment-specific config files in each repository creates an exponential maintenance burden. We're seeing teams spend 40%+ of their time just managing configuration drift between environments.</p>
+
+            <p>The more sophisticated teams are moving toward what we call "workload-centric configuration" - where the application describes what it needs (database, cache, secrets) rather than how to configure specific infrastructure components.</p>
+
+            <h3>Industry Insights</h3>
+
+            <p>Our analysis of cloud-native conversations continues to show interesting trends:</p>
+            <ul>
+                <li>Kubernetes adoption is accelerating, but so is the complexity burden</li>
+                <li>Most teams underestimate the operational overhead of self-managed K8s</li>
+                <li>The most successful implementations use managed services wherever possible</li>
+                <li>GitOps is becoming the standard for deployment workflows</li>
+            </ul>
+
+            <p>What's particularly interesting is that the teams having the most success with Kubernetes aren't necessarily the most technically sophisticated - they're the ones who've invested the most in developer experience and operational tooling.</p>
+
+            <h3>Tool Spotlight</h3>
+
+            <p><strong>Tekton</strong> continues to gain traction as a cloud-native CI/CD solution. What we love about Tekton is how it embraces Kubernetes primitives rather than fighting against them. The declarative pipeline definitions make it much easier to maintain consistency across teams.</p>
+
+            <p><strong>Crossplane</strong> is another tool worth watching. It's bringing the Kubernetes API model to infrastructure provisioning, which could be a game-changer for platform teams that want to offer infrastructure self-service without giving up control.</p>
+
+            <h3>From Our Team</h3>
+
+            <p>We've been working on some exciting research around developer productivity metrics. Early findings suggest that the traditional metrics (lines of code, commits per day) are not just useless - they're actively harmful.</p>
+
+            <p>The metrics that actually correlate with business outcomes are things like:</p>
+            <ul>
+                <li>Time from idea to production deployment</li>
+                <li>Mean time to recovery from incidents</li>
+                <li>Developer self-service success rate</li>
+                <li>Configuration drift incidents</li>
+            </ul>
+
+            <p>We'll be publishing our full findings in the coming weeks.</p>
+
+            <p>As always, we'd love to hear your thoughts on these topics. What challenges is your team facing with developer productivity? What tools or practices have been game-changers for you?</p>
+
+            <p>Thanks for reading,</p>
+
+            <p>Kaspar<br>
+            CEO of Humanitec</p>
+
+            <div class="newsletter-navigation" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p><a href="newsletter-3.html">Next: Issue #3 - Developer Productivity & Experience [Issue 3] →</a></p>
+                <p><a href="newsletter-1.html">← Previous: Issue #1 - Join our conversation on developer productivity</a></p>
+                <p><a href="newsletter.html">Back to Newsletter Archive</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

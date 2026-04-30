@@ -1,0 +1,75 @@
+# Kaspar von Grünberg
+
+> Kaspar von Grünberg is a founder and writer advancing Platform Engineering as the operating model for enterprise knowledge work. He is based near Berlin, Germany.
+
+## Who he is
+
+Kaspar von Grünberg helped establish Platform Engineering as a formal discipline. He writes independently on the theory that underpins platforms, and builds the ecosystem that brings it to practice.
+
+Current focus: how platforms enable enterprise AI adoption.
+
+## Organizations founded
+
+- [Canyon](https://getcanyon.ai/) — AI base platform for enterprise. Semantic data layer for agentic applications.
+- [PlatformCon](https://platformcon.com/) — The annual Platform Engineering conference. Largest event in the discipline.
+- [PlatformEngineering.org](https://platformengineering.org/) — Open community. Largest Platform Engineering community globally.
+- [Weave Intelligence](https://weaveintelligence.io/) — Analyst firm for Platform Engineering.
+- [Platform University](https://university.platformengineering.org/) — Education programs for platform teams.
+- [Humanitec](https://humanitec.com/) — Platform orchestrator. Reference implementation for Internal Developer Platforms.
+
+## Writing
+
+Essays and articles: [kasparvongruenberg.com/writing.html](https://kasparvongruenberg.com/writing.html)
+
+Selected essays:
+- "Why platform engineering will eat the world" — foundational thesis on platform engineering as the inevitable evolution of software development
+- "Why every Internal Developer Platform needs a backend" — the distinction between frontend tooling and systematic platform architecture
+- "Dark Side of Self-Service" — how cognitive load and abstraction failures undermine self-service rhetoric
+- "Evaluating DevOps Maturity" — a framework for maturity benchmarking
+
+## Book
+
+Title: **Platform Engineering as an Operating Model for Knowledge Work**
+
+A three-part book separating platform theory from vendor practice:
+1. Origins — why platforms must be treated as products
+2. Model — the Paths to Outcome conceptual framework
+3. Practice — how to build and scale platforms inside enterprises
+
+Expected publication: June 2026
+
+## Newsletter
+
+Periodic essays on Platform Engineering and enterprise AI adoption. No sponsors. No paid placements.
+
+Published on Substack: [kasparvongruenberg.substack.com](https://kasparvongruenberg.substack.com/)
+
+Topics:
+- Platform Engineering as the foundation for enterprise AI
+- Agentic development and the changing role of software engineers
+- Business users as platform consumers
+- Organizational design for knowledge work
+- Field notes from enterprise roll-outs
+
+## Notable interviews
+
+- Barry O'Reilly, Unlearn — on building developer platforms, mentorship, and elite performance
+- Kelsey Hightower, PlatformCon — on the origins, lessons, and future of platform engineering
+- Ganesh Datta, Braintrust by Cortex — on why software production must move beyond artisanal execution
+- Ivan Krnić, 0800-DEVOPS — on platform engineering as controlled, value-creating systems design
+
+## Key concepts
+
+**Internal Developer Platform (IDP)** — A self-service layer that abstracts infrastructure complexity and standardizes software delivery across an organization.
+
+**Paths to Outcome** — Kaspar's conceptual framework describing how platforms should structure the relationship between platform teams and their consumers. Core to the book.
+
+**Cost of Chaos** — A framework for measuring the organizational cost of inconsistent, undisciplined software delivery.
+
+**Platform Engineering as operating model** — The thesis that Platform Engineering is not a tooling discipline but an organizational operating model for knowledge work.
+
+## Contact
+
+Email: kaspar@vongruenberg.com
+LinkedIn: [linkedin.com/in/kvgruenberg](https://www.linkedin.com/in/kvgruenberg/)
+Website: [kasparvongruenberg.com](https://kasparvongruenberg.com)

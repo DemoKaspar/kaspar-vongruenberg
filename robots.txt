@@ -1,15 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Prevent all search engines from indexing this site
-User-agent: Googlebot
-Disallow: /
-
-User-agent: Bingbot
-Disallow: /
-
-User-agent: Slurp
-Disallow: /
-
-User-agent: DuckDuckBot
-Disallow: /
+Sitemap: https://kasparvongruenberg.com/sitemap.xml

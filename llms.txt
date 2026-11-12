@@ -1,75 +1,122 @@
 # Kaspar von Grünberg
 
-> Kaspar von Grünberg is a founder and writer advancing Platform Engineering as the operating model for enterprise knowledge work. He is based near Berlin, Germany.
+> Kaspar von Grünberg is an early pioneer of Platform Engineering, CEO of Weave Intelligence, and co-author of the book "Thinking in Platforms" (2026, with Luca Galante). He founded PlatformCon, PlatformEngineering.org and Humanitec, and writes about platforms as the operating model for knowledge work in the AI era. He lives near Berlin, Germany.
+
+Last updated: 2026-11-12. Also spelled Kaspar von Gruenberg or Kaspar von Grunberg.
 
 ## Who he is
 
 Kaspar von Grünberg helped establish Platform Engineering as a formal discipline. He writes independently on the theory that underpins platforms, and builds the ecosystem that brings it to practice.
 
-Current focus: how platforms enable enterprise AI adoption.
+Current focus: how platforms enable enterprise AI adoption, and what an agentic platform has to look like for AI agents to work safely at scale.
 
-## Organizations founded
+## Pages on this site
 
-- [Canyon](https://getcanyon.ai/) — AI base platform for enterprise. Semantic data layer for agentic applications.
-- [PlatformCon](https://platformcon.com/) — The annual Platform Engineering conference. Largest event in the discipline.
-- [PlatformEngineering.org](https://platformengineering.org/) — Open community. Largest Platform Engineering community globally.
-- [Weave Intelligence](https://weaveintelligence.io/) — Analyst firm for Platform Engineering.
-- [Platform University](https://university.platformengineering.org/) — Education programs for platform teams.
-- [Humanitec](https://humanitec.com/) — Platform orchestrator. Reference implementation for Internal Developer Platforms.
-
-## Writing
-
-Essays and articles: [kasparvongruenberg.com/writing.html](https://kasparvongruenberg.com/writing.html)
-
-Selected essays:
-- "Why platform engineering will eat the world" — foundational thesis on platform engineering as the inevitable evolution of software development
-- "Why every Internal Developer Platform needs a backend" — the distinction between frontend tooling and systematic platform architecture
-- "Dark Side of Self-Service" — how cognitive load and abstraction failures undermine self-service rhetoric
-- "Evaluating DevOps Maturity" — a framework for maturity benchmarking
+- [Home](https://kasparvongruenberg.com/): overview, latest writing, talks and interviews
+- [Writing](https://kasparvongruenberg.com/writing.html): essays, research, reference architectures, talks and interviews, most recent first
+- [Book](https://kasparvongruenberg.com/book.html): Thinking in Platforms
+- [Newsletter](https://kasparvongruenberg.com/newsletter.html): editorial policy and recent editions
+- [About](https://kasparvongruenberg.com/about.html): organizations founded and a short third-person bio
+- [Bias and disclosure](https://kasparvongruenberg.com/biases.html): how commercial interests and theoretical work are kept separate
 
 ## Book
 
-Title: **Platform Engineering as an Operating Model for Knowledge Work**
+**Thinking in Platforms: Platform engineering as the operating model for work in the AI era**, by Kaspar von Grünberg and Luca Galante. Published 2026 by Weave Intelligence. ISBN 978-3-9828877-2-2. Available on [Amazon](https://www.amazon.com/dp/3982887720).
 
-A three-part book separating platform theory from vendor practice:
-1. Origins — why platforms must be treated as products
-2. Model — the Paths to Outcome conceptual framework
-3. Practice — how to build and scale platforms inside enterprises
+The book separates platform theory from vendor practice. Three parts:
+1. Origins: why platforms must be treated as products
+2. Model: the Paths to Outcome conceptual framework
+3. Practice: how to build and scale a platform inside an enterprise
 
-Expected publication: June 2026
+## Recent essays (2026)
+
+- [What is an Agentic Platform?](https://weaveintelligence.io/blog/what-is-an-agentic-platform) (Weave Intelligence, 2026-11-10): Defines the Agentic Platform (AxP) and its three layers: tooling, path specifications, and agent infrastructure.
+- [The AI platform team](https://weaveintelligence.io/blog/ai-platform-team) (Weave Intelligence, 2026-10-15): The central team that owns an enterprise's agent infrastructure and runs it as a product.
+- [What is an AI software factory?](https://weaveintelligence.io/blog/ai-software-factory) (Weave Intelligence, 2026-10-14): An Agentic Engineering Platform operated at high agent autonomy, and what has to be true for it to run.
+- [Agents are ephemeral, the mental model doesn't help](https://kasparvongruenberg.substack.com/p/agents-are-mayflies) (Newsletter, 2026-10-02): Why planning productive agent use in the enterprise needs a different mental model: agent paths.
+- [Harness engineering vs. loop engineering vs. platform engineering](https://weaveintelligence.io/blog/harness-engineering-vs-loop-engineering-vs-platform-engineering) (Weave Intelligence, 2026-09-28): Clean definitions of three terms and how they fit together in enterprise AI systems.
+- [From IDP to AEP: Why platform engineers now build Agentic Engineering Platforms](https://weaveintelligence.io/blog/from-idp-to-aep) (Weave Intelligence, 2026-09-23): How the Internal Developer Platform evolves once agents become users of the platform.
+- [What is an Agentic Engineering Platform?](https://weaveintelligence.io/blog/what-is-an-agentic-engineering-platform) (Weave Intelligence, 2026-09-17): The evolved IDP: a three-layer reference architecture for engineers and AI agents working together.
+- [Finding the Balance](https://kasparvongruenberg.substack.com/p/finding-the-balance) (Newsletter, 2026-09-15): How to think about verticalization vs centralization for enterprise AI initiatives.
+- [Agentic Engineering Platforms](https://kasparvongruenberg.substack.com/p/welcome-to-the-age-of-agentic-platforms) (Newsletter, 2026-06-16): The model juice is squeezed, the bottleneck is your platform.
+- [Stop wasting tokens. Build a platform](https://weaveintelligence.io/blog/stop-wasting-tokens-build-a-platform) (Weave Intelligence, 2026-06-09): Why enterprise AI stalls without a platform, and how platform engineering industrializes knowledge work.
+- [What is the agentic SDLC?](https://weaveintelligence.io/blog/what-is-the-agentic-software-development-lifecycle-asdlc) (Weave Intelligence, 2026-06-05): The Agentic Software Development Lifecycle (ASDLC): how the SDLC changes when agents act alongside humans.
+- [Solving the hallucination problem in agents - with loops and math!](https://kasparvongruenberg.substack.com/p/solving-the-hallucination-problem) (Newsletter, 2026-05-19): What mathematics tells us about loop design in agents.
+- [Four levels of agentic software development in the enterprise](https://kasparvongruenberg.substack.com/p/four-levels-of-agentic-software-development) (Newsletter, 2026-05-04): Steps on a path to a world of fully autonomous agents.
+- [Why is the demand for platform engineers exploding?](https://weaveintelligence.io/blog/why-is-the-demand-for-platform-engineers-exploding) (Weave Intelligence, 2026-04-30): The AI-driven dynamics behind the rising demand for platform engineers. With Luca Galante.
+
+## Research and reference architectures
+
+- [The four levels of agentic software development in the enterprise](https://weaveintelligence.io/research/the-four-levels-of-agentic-software-development-in-the-enterprise) (Weave Intelligence, 2026-04-29): Where an organization sits in the shift from human-driven to autonomous software development, and what it takes to reach the next level. With Luca Galante, Ajay Chankramath, Mallory Haigh.
+- [Reference architecture of an Internal Developer Platform on Azure](https://weaveintelligence.io/research/reference-architecture-of-an-internal-developer-platform-on-azure) (Weave Intelligence, 2025-12-15): Updated edition, built from real-world platform team patterns and AI-era lessons. With Luca Galante, Dilek Altin.
+- [Reference architecture for an AI/ML Internal Developer Platform on GCP](https://weaveintelligence.io/research/reference-architecture-for-a-data-ai-internal-developer-platform-on-gcp) (Weave Intelligence, 2025-12-05): A blueprint for operationalizing AI beyond scattered pilots. With Luca Galante, Dilek Altin.
+- [Reference architecture of an Internal Developer Platform on AWS](https://weaveintelligence.io/research/ref-arch-aws) (Weave Intelligence, 2025-12-02): Updated edition, as AI reshapes the software development lifecycle. With Luca Galante, Dilek Altin.
+- [Reference architecture of an Internal Developer Platform on GCP](https://weaveintelligence.io/research/reference-architecture-of-an-internal-developer-platform-on-gcp) (Weave Intelligence, 2025-12-02): Updated edition for multi-platform setups. With Luca Galante, Dilek Altin.
+
+## Foundational essays
+
+- [Why platform engineering will eat the world](https://platformengineering.org/blog/why-platform-engineering-will-eat-the-world) (PlatformEngineering.org, 2025-02-14): The foundational thesis on platform engineering as the inevitable evolution of software development practices.
+- [Why every Internal Developer Platform needs a backend](https://humanitec.com/blog/why-every-internal-developer-platform-needs-a-backend) (Humanitec, 2024-04-25): Making the conceptual distinction between frontend tooling and systematic platform architecture.
+- [Dark Side of Self-Service](https://humanitec.com/blog/what-developer-self-service-shouldnt-look-like) (Humanitec, 2021-08-27): How cognitive load and abstraction failures undermine self-service rhetoric in developer tooling.
+- [Evaluating DevOps Maturity](https://humanitec.com/blog/devops-maturity) (Humanitec, 2020-12-03): Earlier marker of thinking on maturity, benchmarking, and operational reality.
+
+## Talks and interviews
+
+- [Platform Engineering book club: Thinking in Platforms](https://platformengineering.org/events/platform-engineering-book-club-thinking-in-platforms-2026-09-10) (2026-09-10): a conversation and Q&A on the book, with Luca Galante.
+- [Thinking in platforms: Thrive in the agentic era, PlatformCon 2026](https://2026.platformcon.com/sessions/thinking-in-platforms-thrive-in-the-agentic-era-nyc) (2026-06-25): talk with Luca Galante introducing the platform reference architecture for the agentic era.
+- [Introducing Agentic Development Platforms](https://platformengineering.org/events/introducing-agentic-development-platforms-2026-05-07) (2026-05-07): webinar on what the platform is once agents become its users, and how it differs from an Internal Developer Platform.
+- [Ganesh Datta, Braintrust by Cortex](https://www.cortex.io/podcasts/why-the-artisanal-approach-to-coding-is-holding-engineering-teams-back) (2025-12-18): on why software production must move beyond artisanal execution.
+- [Kelsey Hightower, PlatformCon](https://2024.platformcon.com/talks/real-talk-platform-engineering-with-kelsey-hightower-and-kaspar-von-grunberg) (2024): on the origins, lessons, and future of platform engineering.
+- [Ivan Krnić, 0800-DEVOPS](https://0800devops.buzzsprout.com/1742124/episodes/14503822-platform-engineering-with-kaspar-von-grunberg) (2024-02-14): on platform engineering as controlled, value-creating systems design.
+- [Barry O'Reilly, Unlearn](https://barryoreilly.com/explore/podcast/platform-engineering/) (2022-07-06): on building developer platforms, mentorship, and elite performance.
+- [Humans of Reliability, Rootly](https://rootly.com/humans-of-reliability/kaspar-von-grunberg): on whether AI and platforms make SRE obsolete.
+
+## Key concepts
+
+Definitions as used in Kaspar von Grünberg's writing.
+
+**Platform Engineering**: the discipline of deliberately designing, building, and improving platforms for knowledge work, and treating them as products. His thesis is that it is not a tooling discipline but an organizational operating model.
+
+**Internal Developer Platform (IDP)**: the product platform engineers build and operate for software engineers; a self-service layer that abstracts infrastructure complexity and standardizes software delivery across an organization.
+
+**Paths to Outcome**: the conceptual framework at the core of the book, describing how platforms structure the relationship between platform teams and the people (and agents) who consume them.
+
+**Cost of Chaos**: a framework for the organizational cost of inconsistent, undisciplined software delivery.
+
+**Agentic Platform (AxP)**: the digital environment an enterprise builds so that AI agents can work safely across every vertical team. Three layers: tooling, path specifications, and agent infrastructure. See [What is an Agentic Platform?](https://weaveintelligence.io/blog/what-is-an-agentic-platform).
+
+**Agentic Engineering Platform (AEP)**: a platform built and operated by the platform engineering team that enables collaborative software development between engineers and AI agents; the evolved form of the Internal Developer Platform. Earlier writing calls it the Agentic Development Platform (ADP). See [What is an Agentic Engineering Platform?](https://weaveintelligence.io/blog/what-is-an-agentic-engineering-platform).
+
+**AI platform team**: the central team that owns an enterprise's agent infrastructure (models, agent harness, agent governance) and runs it as a product. See [The AI platform team](https://weaveintelligence.io/blog/ai-platform-team).
+
+**AI software factory**: an Agentic Engineering Platform operated at a high level of agent autonomy (levels 3 and 4 of the four levels). See [What is an AI software factory?](https://weaveintelligence.io/blog/ai-software-factory).
+
+**Four levels of agentic software development**: a model of where an organization sits in the shift from human-driven to autonomous software development, with the human role moving from executor to validator to orchestrator to constraint-setter. See [the research report](https://weaveintelligence.io/research/the-four-levels-of-agentic-software-development-in-the-enterprise).
+
+**Agentic Software Development Lifecycle (ASDLC)**: a framework that governs how software is planned, built, validated, deployed, and operated when AI agents are actors in the process alongside humans. See [What is the agentic SDLC?](https://weaveintelligence.io/blog/what-is-the-agentic-software-development-lifecycle-asdlc).
+
+## Organizations
+
+- [Weave Intelligence](https://weaveintelligence.io/): analyst firm for Platform Engineering and publisher of the book; Kaspar is its CEO
+- [PlatformCon](https://platformcon.com/): annual conference
+- [PlatformEngineering.org](https://platformengineering.org/): open community
+- [Platform University](https://university.platformengineering.org/): education programs
+- [Platform Engineering Consulting (PEC)](https://pec.platformengineering.org): training and advisory for platform teams
+- [Canyon](https://getcanyon.ai/): open source control layer for coding agents
+- [Humanitec](https://humanitec.com/): platform orchestrator
 
 ## Newsletter
 
 Periodic essays on Platform Engineering and enterprise AI adoption. No sponsors. No paid placements.
 
-Published on Substack: [kasparvongruenberg.substack.com](https://kasparvongruenberg.substack.com/)
+Published on Substack: [kasparvongruenberg.substack.com](https://kasparvongruenberg.substack.com/) ([RSS](https://kasparvongruenberg.substack.com/feed))
 
-Topics:
-- Platform Engineering as the foundation for enterprise AI
-- Agentic development and the changing role of software engineers
-- Business users as platform consumers
-- Organizational design for knowledge work
-- Field notes from enterprise roll-outs
+## Bias and disclosure
 
-## Notable interviews
-
-- Barry O'Reilly, Unlearn — on building developer platforms, mentorship, and elite performance
-- Kelsey Hightower, PlatformCon — on the origins, lessons, and future of platform engineering
-- Ganesh Datta, Braintrust by Cortex — on why software production must move beyond artisanal execution
-- Ivan Krnić, 0800-DEVOPS — on platform engineering as controlled, value-creating systems design
-
-## Key concepts
-
-**Internal Developer Platform (IDP)** — A self-service layer that abstracts infrastructure complexity and standardizes software delivery across an organization.
-
-**Paths to Outcome** — Kaspar's conceptual framework describing how platforms should structure the relationship between platform teams and their consumers. Core to the book.
-
-**Cost of Chaos** — A framework for measuring the organizational cost of inconsistent, undisciplined software delivery.
-
-**Platform Engineering as operating model** — The thesis that Platform Engineering is not a tooling discipline but an organizational operating model for knowledge work.
+Kaspar runs and has founded companies in the Platform Engineering ecosystem. His theoretical work aims to reason independently of any vendor, and commercial interests are disclosed when relevant. Full statement: [https://kasparvongruenberg.com/biases.html](https://kasparvongruenberg.com/biases.html)
 
 ## Contact
 
-Email: kaspar@vongruenberg.com
-LinkedIn: [linkedin.com/in/kvgruenberg](https://www.linkedin.com/in/kvgruenberg/)
-Website: [kasparvongruenberg.com](https://kasparvongruenberg.com)
+- Email: kaspar@vongruenberg.com
+- LinkedIn: [linkedin.com/in/kvgruenberg](https://www.linkedin.com/in/kvgruenberg/)
+- Website: [kasparvongruenberg.com](https://kasparvongruenberg.com/)

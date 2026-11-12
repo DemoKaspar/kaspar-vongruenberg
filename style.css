@@ -126,3 +126,16 @@ em {
         font-size: 14px;
     }
 }
+.meta {
+    color: #666;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.lede {
+    font-size: 17px;
+}
+
+main li {
+    margin: 8px 0;
+}
